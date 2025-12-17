@@ -1,2 +1,5 @@
-@use "./base/reset";
-@use "./base/base";
+@use "./base";
+@use "./theme";
+@use "./abstracts";
+@use "./layout";
+@use "./components";
