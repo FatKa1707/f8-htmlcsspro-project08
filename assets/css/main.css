@@ -1343,6 +1343,7 @@ html.darkk {
   left: 0;
   padding-top: 54px;
   width: min(1240px, 100%);
+  display: none;
 }
 .dropdown__inner {
   --inner-padding: 30px;
