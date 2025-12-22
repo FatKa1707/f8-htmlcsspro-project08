@@ -3,20 +3,19 @@
 /* Grid system */
 // Break-points, dimensions, col, row, ....
 $grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
+    xxl: 1400px,
     xl: 1200px,
-    xxl: 1400px
+    lg: 992px,
+    md: 768px,
+    sm: 576px
 );
 
 $container-max-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1170px,
-    xxl: 1370px
+    sm: 100%,
+    md: 540px,
+    lg: 720px,
+    xl: 960px,
+    xxl: 1140px
 );
 
 $gutters: (
@@ -47,6 +46,8 @@ $grid-gutter-width: 30px !default;
 
 .container {
     @extend .container-fluid;
+
+    width: 1370px;
 }
 
 .row {
@@ -68,12 +69,12 @@ $grid-gutter-width: 30px !default;
 }
 
 @mixin make-media-query($deminsion) {
-    @media (min-width: $deminsion) {
+    @media (max-width: ($deminsion - 0.02)) {
         @content;
     }
 }
 
-@mixin make-row-colums($infix) {
+@mixin make-row-colums($infix: null) {
     @for $i from 1 through $grid-column * 0.5 {
         .row-cols#{$infix}-#{$i} > * {
             flex: 0 0 auto;
@@ -82,7 +83,7 @@ $grid-gutter-width: 30px !default;
     }
 }
 
-@mixin make-columns($infix) {
+@mixin make-columns($infix: null) {
     @for $i from 1 through $grid-column {
         .col#{$infix}-#{$i} {
             flex: 0 0 auto;
@@ -91,7 +92,7 @@ $grid-gutter-width: 30px !default;
     }
 }
 
-@mixin make-offset($infix) {
+@mixin make-offset($infix: null) {
     @for $i from 0 to $grid-column {
         .offset#{$infix}-#{$i} {
             margin-left: if($i > 0, math.div(100%, $grid-column) * $i, 0);
@@ -99,7 +100,7 @@ $grid-gutter-width: 30px !default;
     }
 }
 
-@mixin make-gutters($infix) {
+@mixin make-gutters($infix: null) {
     @each $i, $ratio in $gutters {
         .g#{$infix}-#{$i} {
             --grid-gutter-x: #{$grid-gutter-width * $ratio}; 
@@ -118,9 +119,17 @@ $grid-gutter-width: 30px !default;
     } 
 }
 
+@include make-row-colums();
+
+@include make-columns();
+
+@include make-offset();
+
+@include make-gutters();
+
 @each $breakpoint, $deminsion in $grid-breakpoints {
     $max-width: map-get($container-max-widths, $breakpoint);
-    $infix: if($breakpoint == xs, "", -#{$breakpoint});
+    $infix: "-#{$breakpoint}";
 
     @include make-media-query($deminsion) {
         .container {

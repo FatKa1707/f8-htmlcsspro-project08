@@ -18,7 +18,7 @@ html.darkk{
     --top-menu-border-color: #171C28;
     --menu-column-icon-color: brightness(0) saturate(100%) invert(80%) sepia(1%) saturate(4800%) hue-rotate(202deg) brightness(125%) contrast(97%);
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --header-shadow-color: 0 20px 60px 10px rgba(0, 0, 0, 0.20);
     }
 
