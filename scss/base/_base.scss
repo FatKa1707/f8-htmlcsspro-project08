@@ -15,12 +15,24 @@ body {
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 button {
     border: none;
     outline: none;
     background: transparent;
+}
+
+a,
+img,
+button,
+textarea,
+select {
+    font-family: inherit;
     color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.icon {
+    filter: var(--icon-color);
 }
