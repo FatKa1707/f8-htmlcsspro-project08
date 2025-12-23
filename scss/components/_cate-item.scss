@@ -1,0 +1,72 @@
+@use "../abstracts";
+
+.cate-item {
+    border-radius: 16px;
+    background: var(--cate-item-bg);
+    display: flex;
+    padding: 20px 26px;
+    gap: 20px;
+    height: 100%;
+
+    @include abstracts.screen(xl) {
+        flex-direction: column;
+    }
+
+    @include abstracts.screen(md) {
+        flex-direction: row;
+    }
+
+    &__thumb {
+        display: block;
+        height: 116px;
+        width: 116px;
+        object-fit: contain;
+        border-radius: 8px;
+        background: var(--cate-item-thumb-bg);
+
+        @include abstracts.screen(xl) {
+            margin: 0 auto;
+            height: 150px;
+            width: 100%;
+        }
+
+        @include abstracts.screen(md) {
+            width: 88px;
+            height: 88px;
+            margin: 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 16px;
+
+        @include abstracts.screen(xxl) {
+            padding-right: 0;
+        }
+    }
+
+    &__title {
+        color: var(--cate-item-title-color);
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.4545; /* 145.455% */
+
+        @include abstracts.screen(md) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__desc {
+        margin-top: 6px;
+        font-size: 1.6rem;
+        line-height: 1.5; /* 150% */
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            line-height: 1.42857; /* 142.857% */
+        }
+    }
+}
