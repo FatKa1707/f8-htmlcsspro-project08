@@ -32,5 +32,14 @@ html {
     @include abstracts.screen(md) {
         --cate-item-bg: #fff;
     }
+
+    // Filter button
+    --filter-btn-color: #6C6C72;
+    --filter-btn-bg: #fff;
+    --like-btn-shadow: rgba(124, 124, 124, 0.20);
+
+    // Product Card
+    --product-card-bg: #fff;
+    --product-card-shadow: rgba(237, 237, 246, 0.20);
     
 }
