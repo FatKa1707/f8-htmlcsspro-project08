@@ -41,6 +41,10 @@ select {
     border: none;
 }
 
+input {
+    background: transparent;
+}
+
 .icon {
     filter: var(--icon-color);
 }
