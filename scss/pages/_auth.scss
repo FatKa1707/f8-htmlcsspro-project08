@@ -20,6 +20,7 @@
         justify-content: center;
         gap: 50px;
         position: relative;
+        background: var(--auth-intro-bg);
 
         &-img {
             max-width: 100%;
@@ -45,6 +46,7 @@
             font-weight: 500;
             line-height: 1.444444; /* 144.444% */
             text-align: center;
+            color: var(--auth-intro-text);
 
             @include abstracts.screen(md) {
                 font-size: 1.5rem;
@@ -76,14 +78,20 @@
             width: min(460px, 100%);
             margin: 0 auto;
             padding: 50px 0;
+
+            @include abstracts.screen(md) {
+                padding: 32px 0;
+            }
         }
     }
 
     &__heading {
         margin-top: 50px;
         font-size: 3rem;
+        color: var(--auth-heading-color);
 
         @include abstracts.screen(md) {
+            margin-top: 40px;
             font-size: 2.2rem;
         }
     }
@@ -92,7 +100,7 @@
         margin-top: 10px;
         font-size: 1.5rem;
         color: #9E9DA8;
-        padding: 0 30px;
+        padding: 0 20px;
 
         @include abstracts.screen(md) {
             font-size: 1.4rem;
@@ -130,6 +138,11 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
+
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+            gap: 20px;
+        }
     }
 
     &__btn {
@@ -143,6 +156,7 @@
         line-height: 1.44444; /* 144.444% */
 
         @include abstracts.screen(md) {
+            margin-top: 40px;
             font-size: 1.6rem;
         }
 

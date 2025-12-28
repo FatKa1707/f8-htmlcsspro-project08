@@ -1359,6 +1359,7 @@ html {
   --filter-form-shadow: rgba(200, 200, 200, 0.40);
   --filter-form-tag-bg: #F8F8FB;
   --auth-content-bg: #fff;
+  --form-placeholder-color: #D2D1D6;
 }
 
 html.darkk {
@@ -1393,7 +1394,12 @@ html.darkk {
   --filter-form-bg: #2F3441;
   --filter-form-shadow: rgba(0, 0, 0, 0.40);
   --filter-form-tag-bg: #171C28;
-  --filter-form-arrow: var(--dropdown-arrow-color) ;
+  --filter-form-arrow: var(--dropdown-arrow-color);
+  --auth-content-bg: #292E39;
+  --auth-intro-bg: #171C28;
+  --auth-intro-text: #B9BABE;
+  --auth-heading-color: #B9BABE;
+  --form-placeholder-color: #B9BABE;
 }
 
 .top-action__btn, .top-action__group, .navbar__link, .navbar__list, .top-bar {
@@ -2504,6 +2510,11 @@ html.darkk {
 .form__group {
   margin-top: 30px;
 }
+@media (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
+}
 .form__group--inline {
   display: flex;
   align-items: center;
@@ -2542,7 +2553,7 @@ html.darkk {
   line-height: 1.4444; /* 144.444% */
 }
 .form__input::placeholder {
-  color: #D2D1D6;
+  color: var(--form-placeholder-color);
 }
 .form__input-icon, .form__input-icon-error {
   margin-left: 12px;
@@ -2663,6 +2674,7 @@ html.darkk {
   justify-content: center;
   gap: 50px;
   position: relative;
+  background: var(--auth-intro-bg);
 }
 .auth__intro-img {
   max-width: 100%;
@@ -2684,6 +2696,7 @@ html.darkk {
   font-weight: 500;
   line-height: 1.444444; /* 144.444% */
   text-align: center;
+  color: var(--auth-intro-text);
 }
 @media (max-width: 767.98px) {
   .auth__intro-text {
@@ -2714,12 +2727,19 @@ html.darkk {
   margin: 0 auto;
   padding: 50px 0;
 }
+@media (max-width: 767.98px) {
+  .auth__content-inner {
+    padding: 32px 0;
+  }
+}
 .auth__heading {
   margin-top: 50px;
   font-size: 3rem;
+  color: var(--auth-heading-color);
 }
 @media (max-width: 767.98px) {
   .auth__heading {
+    margin-top: 40px;
     font-size: 2.2rem;
   }
 }
@@ -2727,7 +2747,7 @@ html.darkk {
   margin-top: 10px;
   font-size: 1.5rem;
   color: #9E9DA8;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 @media (max-width: 767.98px) {
   .auth__desc {
@@ -2765,6 +2785,12 @@ html.darkk {
   flex-direction: column;
   gap: 30px;
 }
+@media (max-width: 767.98px) {
+  .auth__btn-group {
+    margin-top: 40px;
+    gap: 20px;
+  }
+}
 .auth__btn {
   width: 100%;
 }
@@ -2776,6 +2802,7 @@ html.darkk {
 }
 @media (max-width: 767.98px) {
   .auth__text {
+    margin-top: 40px;
     font-size: 1.6rem;
   }
 }
