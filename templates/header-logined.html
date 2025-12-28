@@ -6,10 +6,10 @@
         </button>
 
         <!-- logo -->
-        <a href="./" class="logo top-bar__logo">
-            <img src="./assets/icons/logo.svg" alt="Grocerymart" class="logo__img top-bar__logo-img">
-            <h1 class="logo__title top-bar__logo-title">grocerymart</h1>
-        </a>
+        <div class="logo">
+            <img src="./assets/icons/logo.svg" alt="Grocerymart" class="logo__img">
+            <h1 class="logo__title">grocerymart</h1>
+        </div>
     
         <!-- Navbar -->
         <nav id="navbar" class="navbar hide">
@@ -4594,8 +4594,29 @@
 
         <!-- Actions -->
         <div class="top-action">
-            <a href="../sign-in.html" class="btn btn--text d-md-none">Log In</a>
-            <a href="../sign-up.html" class="btn btn--primary top-action__sign-up">Sign Up</a>
+            <div class="top-action__group d-md-none top-action__group--single">
+                <button class="top-action__btn">
+                    <img src="./assets/icons/search.svg" alt="" class="icon top-action__icon">
+                </button>
+            </div>
+    
+            <div class="top-action__group d-md-none">
+                <button class="top-action__btn">
+                    <img src="./assets/icons/heart.svg" alt="" class="icon top-action__icon">
+                    <span class="top-action__title">03</span>
+                </button>
+    
+                <div class="top-action__separate"></div>
+    
+                <button class="top-action__btn">
+                    <img src="./assets/icons/buy.svg" alt="" class="icon top-action__icon">
+                    <span class="top-action__title">$65.42</span>
+                </button>
+            </div>
+    
+            <div class="top-action__user">
+                <img src="./assets/img/avatar.jpg" alt="" class="top-action__avatar">
+            </div>
         </div>
     </div>
 </div>
