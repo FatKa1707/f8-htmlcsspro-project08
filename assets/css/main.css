@@ -2618,7 +2618,19 @@ html.darkk {
   border-color: transparent transparent #fff #fff;
   rotate: -45deg;
   left: 2px;
-  top: 5px;
+  top: 4px;
+}
+
+.massage {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+.massage--success {
+  background: rgba(9, 200, 83, 0.5);
 }
 
 .home__container {
@@ -2677,6 +2689,7 @@ html.darkk {
   background: var(--auth-intro-bg);
 }
 .auth__intro-img {
+  width: var(--width);
   max-width: 100%;
 }
 .auth__intro-logo, .auth__intro-next {
@@ -2759,9 +2772,15 @@ html.darkk {
   font-weight: 500;
   line-height: 1.46666; /* 146.667% */
 }
+.auth__massage {
+  margin-top: 30px;
+}
 .auth__form {
   width: 100%;
   margin-top: 30px;
+}
+.auth__form-forgot {
+  margin-top: 10px;
 }
 @media (max-width: 767.98px) {
   .auth__form {
