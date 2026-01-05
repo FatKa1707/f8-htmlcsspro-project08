@@ -1,19 +1,46 @@
+@use "../abstracts";
+
 .product-page {
     display: flex;
     min-height: 80vh;
     flex-direction: column;
     background: var(--product-detail-bg);
+    padding-bottom: 50px;
 }
 
 .product-container {
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
+}
+
+.prod-info-content {
+    border-radius: 20px;
+    background: var(--product-detail-info-content-bg);
 }
 
 .prod-review {
+    padding: 0 30px;
+
+    @include abstracts.screen(lg) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    @include abstracts.screen(md) {
+        padding: 16px;
+    }
+
     &__list {
         display: flex;
         align-items: center;
         overflow: hidden;
+
+        @include abstracts.screen(lg) {
+            flex: 1;
+        }
     }
 
     &__item {
@@ -38,6 +65,15 @@
         justify-content: center;
         gap: 16px;
         padding: 30px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            padding-left: 0;
+        }
+
+        @include abstracts.screen(md) {
+            display: none;
+        }
     }
 
     &__thumb-img {
@@ -46,14 +82,14 @@
         object-fit: contain;
         border: 1.5px solid rgba(158, 157, 168, 0.3);
         border-radius: 8px;
-        cursor: pointer;
         opacity: 0.9;
         transition: opacity, border-color;
         transition-duration: 0.3s;
 
-        &:hover {
+        &:not(&--current):hover {
             opacity: 1;
             border-color: #9e9da8;
+            cursor: pointer;
         }
 
         &--current {
@@ -64,8 +100,23 @@
 }
 
 .prod-info {
+    border-radius: 10px;
     padding: 60px;
-    background: #F6F6F6;
+    background: var(--product-detail-info-bg);
+
+    @include abstracts.screen(xxl) {
+        padding: 40px;
+    }
+
+    @include abstracts.screen(lg) {
+        margin-top: 30px;
+    }
+
+    @include abstracts.screen(md) {
+        border-radius: 20px;
+        padding: 0 16px 16px;
+        margin-top: 0;
+    }
 
     &__heading {
         font-size: 2.6rem;
@@ -74,7 +125,7 @@
     }
 
     &__tag {
-        background: #EDEDF6;
+        background: var(--product-detail-tag-bg);
     }
 
     &__label {
@@ -101,8 +152,9 @@
 
     &__tax {
         padding: 2px 8px;
+        border-radius: 4px;
         margin-left: 10px;
-        background:  linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), #67B044;
+        background:  rgba($color: #67B044, $alpha: 0.2);
 
         color: var(--Green-Green, #67B044);
         font-size: 1.4rem;
@@ -119,6 +171,10 @@
 
     &__add-to-card {
         flex: 1;
+
+        @include abstracts.screen(xxl) {
+            padding: 0 17px;
+        }
     }
 
     &__like-btn {
@@ -134,6 +190,14 @@
 
 .prod-props {
     padding-left: 30px;
+
+    @include abstracts.screen(xxl) {
+        padding: 10px;
+    }
+
+    @include abstracts.screen(lg) {
+        padding: 0;
+    }
 }
 
 .prod-prop {
