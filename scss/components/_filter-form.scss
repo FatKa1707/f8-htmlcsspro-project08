@@ -46,19 +46,7 @@
 
     &__form {
 
-        &-label {
-            display: block;
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 1.4545; /* 145.455% */
-
-            &--small {
-                margin-bottom: 10px;
-                font-size: 1.4rem;
-                font-weight: 500;
-                line-height: 1.42857; /* 142.857% */
-            }
-        }
+        
 
         &-group {
             margin-top: 20px;
@@ -99,7 +87,7 @@
             }
         }
 
-        &-text-input, &-select-wrap {
+        &-text-input{
             border-radius: 6px;
             border: 1px solid #D2D1D6;
         }
@@ -151,60 +139,6 @@
 
         &-input-icon {
             margin-left: 12px;
-        }
-
-        &-select-wrap {
-            display: flex;
-            align-items: center;
-            height: 45px;
-        }
-
-        &-select {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 14px;
-            min-width: var(--width, 108px);
-            height: calc(100% - 10px);
-            cursor: pointer;
-
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 1.42857; /* 142.857% */
-
-            @include abstracts.screen(xl) {
-                flex: 1;
-            }
-        }
-
-        &-select + &-select {
-            border-left: 1px solid #D2D1D6;
-        }
-
-        &-tags {
-            display: flex;
-            gap: 10px 20px;
-            flex-wrap: wrap;
-
-            @include abstracts.screen(sm) {
-                gap: 10px;
-            }
-        }
-
-        &-tag {
-            color: #9E9DA8;
-            border-radius: 0.6rem;
-            background: var(--filter-form-tag-bg);
-            padding: 6px 12px;
-            transition: color 0.2s;
-
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 1.42857; /* 142.857% */
-
-            &:hover {
-                color: var(--text-color)
-            }
         }
     }
 
