@@ -1409,6 +1409,8 @@ html {
   --checkout-cart-info-shadow: rgba(237, 237, 246, 0.20);
   --checkout-border-color: #D2D1D6;
   --checkout-gift-shadow: rgba(237, 237, 246, 0.20);
+  --dialog-bg: #fff;
+  --dialog-shadow: rgba(237, 237, 246, 0.20);
 }
 
 html.darkk {
@@ -1423,7 +1425,7 @@ html.darkk {
   --header-act-dropdown-shadow: rgba(23, 28, 40, 0.40);
   --header-act-dropdown-border-color: #171C28;
   --dropdown-bg-color: #2F3441;
-  --dropdown-shadow-color: 0 40px 90px 20px rgba(23, 28, 40, 0.40);
+  --dropdown-shadow-color: rgba(23, 28, 40, 0.40);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(19%) sepia(19%) saturate(559%) hue-rotate(186deg) brightness(92%) contrast(95%);
   --top-menu-border-color: #171C28;
   --menu-column-icon-color: brightness(0) saturate(100%) invert(80%) sepia(1%) saturate(4800%) hue-rotate(202deg) brightness(125%) contrast(97%);
@@ -1481,6 +1483,8 @@ html.darkk {
   --checkout-cart-info-shadow: rgba(23, 28, 40, 0.20);
   --checkout-border-color: #292E39;
   --checkout-gift-shadow: rgba(23, 28, 40, 0.20);
+  --dialog-bg: #2F3441;
+  --dialog-shadow: rgba(23, 28, 40, 0.40);
 }
 
 .top-action__btn, .top-action__group, .navbar__link, .navbar__list, .top-bar {
@@ -2012,7 +2016,7 @@ html.darkk {
   padding: var(--inner-padding);
   border-radius: 2rem;
   background: var(--dropdown-bg-color);
-  box-shadow: var(--dropdown-shadow-color);
+  box-shadow: 0 40px 90px 20px var(--dropdown-shadow-color);
 }
 .dropdown__inner::before {
   content: url("../icons/dropdown.svg");
@@ -2373,12 +2377,16 @@ html.darkk {
   font-size: 1.8rem;
   font-weight: 500;
   user-select: none;
+  white-space: nowrap;
+}
+.btn--small {
+  height: 40px;
+  padding: 0 16px;
 }
 .btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
 }
 .btn--text {
-  color: #9d9ea8;
   background: transparent;
   font-weight: 400;
 }
@@ -3016,6 +3024,61 @@ html.darkk {
   height: 1.5px;
   background: #ebebeb;
   margin: 40px 0;
+}
+
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity, visibility;
+  transition-duration: 0.3s;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+}
+.dialog__overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+.dialog__content {
+  position: relative;
+  z-index: 1;
+  max-width: min(450px, 100% - 40px);
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--dialog-bg);
+  box-shadow: 0 20px 60px 10px var(--dialog-shadow);
+}
+.dialog__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.dialog__bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media (max-width: 767.98px) {
+  .dialog {
+    padding: 20px;
+  }
+  .dialog__bottom {
+    gap: 20px;
+  }
+  .dialog__btn {
+    flex: 1;
+  }
 }
 
 .home {
