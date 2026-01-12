@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="darkk">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -447,9 +447,43 @@
                                     name=""
                                     placeholder="City/District/Town"
                                     id="city"
-                                    class="form__input"
+                                    class="form__input js-toggle"
+                                    toggle-target="#city-dialog"
                                 />
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+
+                                <div id="city-dialog" class="form__select-dialog hide">
+                                    <div class="form__search">
+                                        <input type="text" placeholder="Search" class="form__search-input">
+                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon">
+                                    </div>
+                                    <ul class="form__option-list">
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option form__option--current">Cần Thơ</li>
+                                        <li class="form__option">Hồ Chí Minh</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Cần Thơ</li>
+                                        <li class="form__option">Hồ Chí Minh</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Cần Thơ</li>
+                                        <li class="form__option">Hồ Chí Minh</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Cần Thơ</li>
+                                        <li class="form__option">Hồ Chí Minh</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Cần Thơ</li>
+                                        <li class="form__option">Hồ Chí Minh</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Cần Thơ</li>
+                                        <li class="form__option">Hồ Chí Minh</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Cần Thơ</li>
+                                        <li class="form__option">Hồ Chí Minh</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Cần Thơ</li>
+                                        <li class="form__option">Hồ Chí Minh</li>
+                                    </ul>
+                                </div>
                             </div>
                             <p class="form__error">Phone must be at least 11 characters</p>
                         </div>

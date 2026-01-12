@@ -107,7 +107,8 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active,
 input:-webkit-autofill:hover {
   transition: background-color 1s 9999s;
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: var(--text-color);
+  caret-color: var(--text-color);
 }
 
 .icon {
@@ -2705,9 +2706,6 @@ html.darkk {
   padding: 0 12px;
   border: 1.5px solid #D2D1D6;
 }
-.form__text-area--small, .form__text-input--small {
-  border-radius: 8px;
-}
 .form__text-area:focus-within, .form__text-input:focus-within {
   border-color: #77DAE6;
 }
@@ -2719,6 +2717,7 @@ html.darkk {
   resize: none;
 }
 .form__text-input {
+  position: relative;
   height: 50px;
 }
 .form__text-input--small {
@@ -2755,6 +2754,58 @@ html.darkk {
 }
 .form__input-icon {
   margin-left: 12px;
+}
+.form__select-dialog {
+  position: absolute;
+  background: #fff;
+  padding: 10px 0;
+  border: 1px solid #d2d1d6;
+  border-radius: 10px;
+  bottom: 44px;
+  left: 10px;
+  max-height: 310px;
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity, visibility, translate;
+  transition-duration: 0.2s;
+  translate: 0 8px;
+}
+.form__select-dialog.show {
+  opacity: 1;
+  visibility: visible;
+  translate: 0;
+}
+.form__search {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d2d1d6;
+  padding: 0 20px 10px;
+}
+.form__search-input {
+  flex: 1;
+}
+.form__search-icon {
+  width: 18px;
+}
+.form__option-list {
+  flex: 1;
+  margin-top: 10px;
+  overflow-y: auto;
+}
+.form__option {
+  padding: 8px 20px;
+  font-size: 1.4rem;
+}
+.form__option--current {
+  font-weight: 500;
+  background: rgba(255, 183, 0, 0.3);
+}
+.form__option:not(.form__option--current):hover {
+  background: #ebebeb;
+  cursor: pointer;
 }
 .form__error {
   margin-top: 10px;
