@@ -1384,6 +1384,9 @@ html {
   --form-tag-bg: #F8F8FB;
   --auth-content-bg: #fff;
   --form-placeholder-color: #D2D1D6;
+  --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
+  --form-select-dialog-bg: #fff;
+  --form-option-hover-bg: #ebebeb;
   --product-detail-bg: #fff;
   --product-detail-info-bg: #f6f6f6;
   --product-detail-info-content-bg: #fff;
@@ -1464,6 +1467,9 @@ html.darkk {
   --auth-intro-text: #B9BABE;
   --auth-heading-color: #B9BABE;
   --form-placeholder-color: #B9BABE;
+  --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
+  --form-select-dialog-bg: #2F3441;
+  --form-option-hover-bg: #292E39;
   --product-detail-bg: #292E39;
   --product-detail-info-bg: #171C28;
   --product-detail-info-content-bg: transparent;
@@ -2757,14 +2763,16 @@ html.darkk {
 }
 .form__select-dialog {
   position: absolute;
-  background: #fff;
-  padding: 10px 0;
+  z-index: 1;
+  background: var(--form-select-dialog-bg);
+  padding-bottom: 10px;
   border: 1px solid #d2d1d6;
   border-radius: 10px;
   bottom: 44px;
   left: 10px;
   max-height: 310px;
   min-width: 230px;
+  box-shadow: 0 0 5px var(--form-select-dialog-shadow);
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -2778,22 +2786,66 @@ html.darkk {
   visibility: visible;
   translate: 0;
 }
+@media (max-width: 575.98px) {
+  .form__select-dialog {
+    position: fixed;
+    max-width: inherit;
+    max-height: inherit;
+    inset: 0;
+    border-radius: 0;
+  }
+}
+.form__close-dialog {
+  position: absolute;
+  font-size: 3rem;
+  right: 0;
+  top: 0;
+  padding: 2px 18px;
+  opacity: 0.8;
+}
 .form__search {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   border-bottom: 1px solid #d2d1d6;
-  padding: 0 20px 10px;
+  padding: 0 20px;
+  height: 38px;
+}
+@media (max-width: 991.98px) {
+  .form__search {
+    height: 42px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form__search {
+    flex-direction: row-reverse;
+    margin-top: 30px;
+  }
 }
 .form__search-input {
   flex: 1;
+  height: 100%;
+  font-size: 1.6rem;
+}
+@media (max-width: 575.98px) {
+  .form__search-input {
+    padding-left: 8px;
+  }
 }
 .form__search-icon {
   width: 18px;
+  margin-left: 10px;
+}
+@media (max-width: 575.98px) {
+  .form__search-icon {
+    margin-left: 0;
+  }
 }
 .form__option-list {
   flex: 1;
   margin-top: 10px;
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .form__option {
   padding: 8px 20px;
@@ -2801,11 +2853,16 @@ html.darkk {
 }
 .form__option--current {
   font-weight: 500;
-  background: rgba(255, 183, 0, 0.3);
+  background: rgba(255, 183, 0, 0.6);
 }
 .form__option:not(.form__option--current):hover {
-  background: #ebebeb;
+  background: var(--form-option-hover-bg);
   cursor: pointer;
+}
+@media (max-width: 991.98px) {
+  .form__option {
+    padding: 14px 20px;
+  }
 }
 .form__error {
   margin-top: 10px;
