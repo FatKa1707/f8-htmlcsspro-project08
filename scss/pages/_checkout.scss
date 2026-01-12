@@ -33,6 +33,12 @@
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 1.41667; /* 141.667% */
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
     }
 
     &__sub-heading {
@@ -40,6 +46,10 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.44444; /* 144.444% */
+
+        @include abstracts.screen(md) {
+            margin-bottom: 16px;
+        }
     }
 
     &__list {
@@ -77,6 +87,10 @@
 
         height: 1px;
         background: var(--checkout-border-color);
+
+        @include abstracts.screen(md) {
+            margin: 16px 0;
+        }
     }
 
     &__continue {
@@ -283,51 +297,78 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
     }
 
     &__title {
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.44444; /* 144.444% */
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__desc {
         margin-top: 4px;
         font-size: 1.5rem;
         line-height: 1.466667; /* 146.667% */
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
-
-    &__list{
-
-    }
-
-
 }
 
 .address-card {
     display: flex;
     margin-top: 30px;
+    
+    @include abstracts.screen(lg) {
+        gap: 20px;
+    }
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+        gap: 16px;
+    }
 
     &__left {
         flex: 1;
         display: flex;
-        gap: 16px;
     }
 
     &__info {
-
+        margin-left: 35px;
     }
 
     &__title {
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.44444; /* 144.444% */
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
     }
 
     &__desc {
         margin-top: 4px;
         font-size: 1.5rem;
         line-height: 1.46667; /* 146.667% */
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            line-height: 1.42857;
+        }
     }
 
     &__list {
@@ -356,5 +397,41 @@
             font-size: 1.8rem;
             line-height: 1.44444; /* 144.444% */
         }
+    }
+}
+
+.form-checkbox {
+    position: relative;
+    display: flex;
+    user-select: none;
+
+    &::before, &::after {
+        position: absolute;
+        content: "";
+        top: 5px;
+    }
+
+    &::before {
+        width: 19px;
+        height: 19px;
+        border-radius: 5px;
+        border: 1.5px solid #1A162E;
+    }
+}
+
+.form-checkbox:has(:checked) {
+    &::before {
+        border-color: #67B044;
+        background: #67B044;
+    }
+
+    &::after {
+        width: 11px;
+        height: 7px;
+        border: 3px solid;
+        border-color: transparent transparent #fff #fff;
+        rotate: -45deg;
+        left: 4px;
+        top: 9px;
     }
 }
