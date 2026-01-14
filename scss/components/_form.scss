@@ -163,6 +163,13 @@ $error-color: #ed4337;
         }
     }
 
+    &__dialog-heading {
+        font-size: 1.8rem;
+        padding: 14px 0;
+        text-align: center;
+        font-weight: 600;
+    }
+
     &__close-dialog {
         position: absolute;
         font-size: 3rem;
@@ -185,27 +192,21 @@ $error-color: #ed4337;
         }
 
         @include abstracts.screen(sm) {
-            flex-direction: row-reverse;
-            margin-top: 30px;
+            padding: 0 14px;
+            margin: 10px 20px 0;
+            border: 1px solid #d2d1d6;
+            border-radius: 10px; 
         }
 
         &-input {
             flex: 1;
             height: 100%;
             font-size: 1.6rem;
-
-            @include abstracts.screen(sm) {
-                padding-left: 8px;
-            }
         }
 
         &-icon {
             width: 18px;
             margin-left: 10px;
-
-            @include abstracts.screen(sm) {
-                margin-left: 0;
-            }
         }
     }
 

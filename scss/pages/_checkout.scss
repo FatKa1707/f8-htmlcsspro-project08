@@ -121,6 +121,15 @@
     &__next-btn {
         margin-top: 30px;
     }
+
+    &__next {
+        width: min(184px, 100%);
+
+        &-wrap-btn {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
 }
 
 .cart-info + .cart-info {

@@ -2417,6 +2417,10 @@ html.darkk {
 .btn--rounded {
   border-radius: 99px;
 }
+.btn--danger {
+  background-color: #ed4337;
+  color: #fff;
+}
 .btn[disabled], .btn--disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -2795,6 +2799,12 @@ html.darkk {
     border-radius: 0;
   }
 }
+.form__dialog-heading {
+  font-size: 1.8rem;
+  padding: 14px 0;
+  text-align: center;
+  font-weight: 600;
+}
 .form__close-dialog {
   position: absolute;
   font-size: 3rem;
@@ -2818,8 +2828,10 @@ html.darkk {
 }
 @media (max-width: 575.98px) {
   .form__search {
-    flex-direction: row-reverse;
-    margin-top: 30px;
+    padding: 0 14px;
+    margin: 10px 20px 0;
+    border: 1px solid #d2d1d6;
+    border-radius: 10px;
   }
 }
 .form__search-input {
@@ -2827,19 +2839,9 @@ html.darkk {
   height: 100%;
   font-size: 1.6rem;
 }
-@media (max-width: 575.98px) {
-  .form__search-input {
-    padding-left: 8px;
-  }
-}
 .form__search-icon {
   width: 18px;
   margin-left: 10px;
-}
-@media (max-width: 575.98px) {
-  .form__search-icon {
-    margin-left: 0;
-  }
 }
 .form__option-list {
   flex: 1;
@@ -3849,6 +3851,13 @@ html.darkk {
 }
 .cart-info__next-btn {
   margin-top: 30px;
+}
+.cart-info__next {
+  width: min(184px, 100%);
+}
+.cart-info__next-wrap-btn {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .cart-info + .cart-info {
