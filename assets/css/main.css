@@ -1817,7 +1817,7 @@ html.darkk {
 .act-dropdown__bottom {
   margin: 20px 0;
   padding: 20px 0;
-  border-width: 1.5px 0;
+  border-width: 1px 0;
   border-color: var(--header-act-dropdown-border-color);
   border-style: solid;
 }
@@ -2716,7 +2716,7 @@ html.darkk {
   border-radius: 1rem;
   height: 50px;
   padding: 0 12px;
-  border: 1.5px solid #D2D1D6;
+  border: 1px solid #D2D1D6;
 }
 .form__text-area:focus-within, .form__text-input:focus-within {
   border-color: #77DAE6;
@@ -2916,7 +2916,7 @@ html.darkk {
   width: 19px;
   height: 19px;
   border-radius: 5px;
-  border: 1.5px solid #9E9DA8;
+  border: 1px solid #9E9DA8;
 }
 .form__checkbox:has(:checked)::before {
   border-color: #FFB700;
@@ -3191,7 +3191,7 @@ html.darkk {
 }
 .text-content hr {
   border: none;
-  height: 1.5px;
+  height: 1px;
   background: #ebebeb;
   margin: 40px 0;
 }
@@ -3574,7 +3574,7 @@ html.darkk {
   width: 65px;
   height: 65px;
   object-fit: contain;
-  border: 1.5px solid rgba(158, 157, 168, 0.3);
+  border: 1px solid rgba(158, 157, 168, 0.3);
   border-radius: 8px;
   opacity: 0.9;
   transition: opacity, border-color;
@@ -3783,10 +3783,20 @@ html.darkk {
     padding: 16px;
   }
 }
+.cart-info__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .cart-info__heading {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.41667; /* 141.667% */
+}
+.cart-info__heading--lv2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.4545; /* 145.455% */
 }
 @media (max-width: 767.98px) {
   .cart-info__heading {
@@ -3871,6 +3881,13 @@ html.darkk {
 .cart-info__next-wrap-btn {
   display: flex;
   justify-content: flex-end;
+}
+.cart-info__edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  line-height: 1.44444; /* 144.444% */
 }
 
 .cart-info + .cart-info {
@@ -4120,13 +4137,6 @@ html.darkk {
   display: flex;
   align-items: flex-end;
 }
-.address-card__ctrl-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.8rem;
-  line-height: 1.44444; /* 144.444% */
-}
 
 .form-checkbox {
   position: relative;
@@ -4142,7 +4152,7 @@ html.darkk {
   width: 19px;
   height: 19px;
   border-radius: 5px;
-  border: 1.5px solid #1A162E;
+  border: 1px solid #1A162E;
 }
 
 .form-checkbox:has(:checked)::before {
@@ -4157,6 +4167,91 @@ html.darkk {
   rotate: -45deg;
   left: 4px;
   top: 9px;
+}
+
+.payment-item {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #F6F6F6;
+  cursor: pointer;
+}
+.payment-item__content {
+  flex: 1;
+}
+.payment-item__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.4444; /* 144.444% */
+}
+.payment-item__desc, .payment-item__detail {
+  font-size: 1.5rem;
+  line-height: 1.46666; /* 146.667% */
+}
+.payment-item__desc {
+  margin-top: 4px;
+}
+.payment-item__detail {
+  margin-right: -8px;
+  color: #0071dc;
+  text-decoration: underline;
+  padding: 8px;
+}
+.payment-item__thumb {
+  width: 70px;
+  height: 54px;
+  border-radius: 10px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+.payment-item__cost-wrap {
+  display: flex;
+  align-items: center;
+}
+.payment-item__cost {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44444; /* 144.444% */
+  color: #9E9DA8;
+  margin-right: 32px;
+}
+.payment-item__checkbox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+.payment-item__checkbox::before, .payment-item__checkbox::after {
+  position: absolute;
+  content: "";
+}
+.payment-item__checkbox::before {
+  top: 18px;
+  right: 0;
+  width: 19px;
+  height: 19px;
+  border-radius: 5px;
+  border: 1px solid #9E9DA8;
+}
+.payment-item__checkbox:has(:checked)::before {
+  border-color: #67B044;
+  background: #67B044;
+}
+.payment-item__checkbox:has(:checked)::after {
+  width: 11px;
+  height: 7px;
+  border: 3px solid;
+  border-color: transparent transparent #fff #fff;
+  rotate: -45deg;
+  right: 4px;
+  top: 22px;
+}
+.payment-item__input:checked + .payment-item__cost {
+  color: inherit;
 }
 
 /*# sourceMappingURL=main.css.map */
