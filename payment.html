@@ -74,7 +74,7 @@
                 <!-- Checkout content -->
                 <div class="checkout-container">
                     <div class="row gy-xl-3">
-                        <div class="col-8 col-xl-12">
+                        <div class="col-8 col-xl-7 col-lg-12">
                             <div class="cart-info">
                                 <div class="cart-info__top">
                                     <h2 class="cart-info__heading cart-info__heading--lv2">1. Shipping, arrives between Mon, May 16—Tue, May 24</h2>
@@ -86,7 +86,7 @@
 
                                 <!-- Payment item 1 -->
                                 <article class="payment-item">
-                                    <div class="payment-item__content">
+                                    <div class="payment-item__info">
                                         <h3 class="payment-item__title">Imran Khan</h3>
                                         <p class="payment-item__desc">Museum of Rajas, Sylhet Sadar, Sylhet 3100.</p>
                                     </div>
@@ -94,7 +94,7 @@
 
                                 <!-- Payment item 2 -->
                                 <article class="payment-item">
-                                    <div class="payment-item__content">
+                                    <div class="payment-item__info">
                                         <h3 class="payment-item__title">Items details</h3>
                                         <p class="payment-item__desc">2 items</p>
                                     </div>
@@ -103,7 +103,7 @@
                             </div>
 
                             <div class="cart-info">
-                                <h2 class="cart-info__heading cart-info__heading--lv2">1. Shipping, arrives between Mon, May 16—Tue, May 24</h2>
+                                <h2 class="cart-info__heading cart-info__heading--lv2">2. Shipping method</h2>
                                 <div class="cart-info__separate"></div>
 
                                 <h3 class="cart-info__sub-heading">Availeble Shipping method</h3>
@@ -113,13 +113,15 @@
                                     <label class="payment-item__checkbox">
                                         <img src="./assets/img/payment/delivery-01.jpg" alt="" class="payment-item__thumb">
                                         <div class="payment-item__content">
-                                            <h3 class="payment-item__title">Shipchung</h3>
-                                            <p class="payment-item__desc">Delivery: 2-3 days work</p>
-                                        </div>
+                                            <div class="payment-item__info">
+                                                <h3 class="payment-item__title">Shipchung</h3>
+                                                <p class="payment-item__desc">Delivery: 2-3 days work</p>
+                                            </div>
 
-                                        <div class="payment-item__cost-wrap">
-                                            <input type="radio" name="delivery" id="delivery-1" class="payment-item__input d-none">
-                                            <span class="payment-item__cost">Free</span>
+                                            <div class="payment-item__cost-wrap">
+                                                <input type="radio" name="delivery" id="delivery-1" class="payment-item__input d-none">
+                                                <span class="payment-item__cost">Free</span>
+                                            </div>
                                         </div>
                                     </label>
                                 </article>
@@ -129,21 +131,23 @@
                                     <label class="payment-item__checkbox">
                                         <img src="./assets/img/payment/delivery-02.jpg" alt="" class="payment-item__thumb">
                                         <div class="payment-item__content">
-                                            <h3 class="payment-item__title">Vietnam Post</h3>
-                                            <p class="payment-item__desc">Delivery: 2-3 days work</p>
-                                        </div>
+                                            <div class="payment-item__info">
+                                                <h3 class="payment-item__title">Vietnam Post</h3>
+                                                <p class="payment-item__desc">Delivery: 2-3 days work</p>
+                                            </div>
 
-                                        <div class="payment-item__cost-wrap">
-                                            <input type="radio" name="delivery" id="delivery-1" class="payment-item__input d-none">
-                                            <span class="payment-item__cost">$12.00</span>
+                                            <div class="payment-item__cost-wrap">
+                                                <input type="radio" name="delivery" id="delivery-1" class="payment-item__input d-none">
+                                                <span class="payment-item__cost">$12.00</span>
+                                            </div>
                                         </div>
                                     </label>
                                 </article>
                             </div>
                         </div>
-                        <div class="col-4 col-xl-12">
+                        <div class="col-4 col-xl-5 col-lg-12">
                             <div class="cart-info">
-                                <h2 class="cart-info__heading cart-info__heading--lv2">1. Shipping, arrives between Mon, May 16—Tue, May 24</h2>
+                                <h2 class="cart-info__heading cart-info__heading--lv2">Payment Details</h2>
                                 <p class="cart-info__desc">Complete your purchase item by providing your payment details order.</p>
 
                                 <form action="" class="form cart-info__form">
@@ -170,7 +174,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="form__row">
+                                    <div class="form__row cart-info__form-row">
                                         <div class="form__group">
                                             <div class="form__text-input">
                                                 <input type="text" name="card-exprie" id="card-exprie" placeholder="MM/YY" class="form__input"  required>
