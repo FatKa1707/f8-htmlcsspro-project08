@@ -2937,6 +2937,12 @@ html.darkk {
   font-weight: 500;
   line-height: 1.4545; /* 145.455% */
 }
+.form__label--medium {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44444; /* 144.444% */
+}
 .form__label--small {
   margin-bottom: 10px;
   font-size: 1.4rem;
@@ -3816,6 +3822,11 @@ html.darkk {
     margin-bottom: 16px;
   }
 }
+.cart-info__desc {
+  margin-top: 6px;
+  font-size: 1.5rem;
+  line-height: 1.46666; /* 146.667% */
+}
 .cart-info__list {
   margin-top: -30px;
 }
@@ -3874,6 +3885,7 @@ html.darkk {
 }
 .cart-info__next-btn {
   margin-top: 30px;
+  border-radius: 10px;
 }
 .cart-info__next {
   width: min(184px, 100%);
@@ -3888,6 +3900,9 @@ html.darkk {
   gap: 10px;
   font-size: 1.8rem;
   line-height: 1.44444; /* 144.444% */
+}
+.cart-info__form {
+  margin-bottom: 30px;
 }
 
 .cart-info + .cart-info {

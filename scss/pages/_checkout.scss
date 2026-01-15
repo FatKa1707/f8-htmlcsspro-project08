@@ -64,6 +64,12 @@
         }
     }
 
+    &__desc {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        line-height: 1.46666; /* 146.667% */
+    }
+
     &__list {
         margin-top: -30px;
 
@@ -132,6 +138,7 @@
 
     &__next-btn {
         margin-top: 30px;
+        border-radius: 10px;
     }
 
     &__next {
@@ -149,6 +156,10 @@
         gap: 10px;
         font-size: 1.8rem;
         line-height: 1.44444; /* 144.444% */
+    }
+
+    &__form {
+        margin-bottom: 30px;
     }
 }
 
