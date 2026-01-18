@@ -1425,6 +1425,13 @@ html {
   --checkout-payment-item-bg: #F6F6F6;
   --dialog-bg: #fff;
   --dialog-shadow: rgba(237, 237, 246, 0.20);
+  --profile-sidebar-bg: #fff;
+  --profile-sidebar-shadow: rgba(237, 237, 246, 0.20);
+  --profile-info-bg: #fff;
+  --profile-info-shadow: rgba(237, 237, 246, 0.20);
+  --profile-separate-bg: #D2D1D6;
+  --account-info-bg: #F6F6F6;
+  --account-info-icon-bg: #fff;
 }
 
 html.darkk {
@@ -1503,6 +1510,13 @@ html.darkk {
   --checkout-payment-item-bg: #292E39;
   --dialog-bg: #2F3441;
   --dialog-shadow: rgba(23, 28, 40, 0.40);
+  --profile-sidebar-bg: #171C28;
+  --profile-sidebar-shadow: rgba(23, 28, 40, 0.20);
+  --profile-info-bg: #171C28;
+  --profile-info-shadow: rgba(23, 28, 40, 0.20);
+  --profile-separate-bg: #292E39;
+  --account-info-bg: #292E39;
+  --account-info-icon-bg: #171C28;
 }
 
 .top-action__btn, .top-action__group, .navbar__link, .navbar__list, .top-bar {
@@ -3388,6 +3402,7 @@ html.darkk {
   justify-content: center;
   gap: 14px;
   height: 100%;
+  min-height: 170px;
   border-radius: 1rem;
   border: 1px dashed #D2D1D6;
 }
@@ -3403,17 +3418,18 @@ html.darkk {
   align-items: center;
   gap: 10px;
   border-radius: 10px;
-  background: #F6F6F6;
+  background: var(--account-info-bg);
   padding: 10px;
 }
 .account-info__icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   height: 54px;
   width: 54px;
   border-radius: 8px;
-  background: #FFF;
+  background: var(--account-info-icon-bg);
 }
 .account-info__title {
   font-size: 1.5rem;
@@ -4489,8 +4505,8 @@ html.darkk {
 .profile__sidebar {
   padding-bottom: 30px;
   border-radius: 20px;
-  background: #FFF;
-  box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--profile-sidebar-bg);
+  box-shadow: 0 20px 60px 10px var(--profile-sidebar-shadow);
   overflow: hidden;
 }
 .profile-user {
@@ -4558,8 +4574,8 @@ html.darkk {
 .profile-info {
   padding: 30px;
   border-radius: 20px;
-  background: #FFF;
-  box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--profile-info-bg);
+  box-shadow: 0 20px 60px 10px var(--profile-info-shadow);
 }
 .profile-info__title {
   font-size: 2.4rem;
@@ -4575,16 +4591,30 @@ html.darkk {
   display: flex;
   gap: 20px;
 }
+@media (max-width: 991.98px) {
+  .profile-product {
+    align-items: center;
+  }
+}
 .profile-product__thumb {
-  width: 151px;
-  height: 108px;
-  object-fit: contain;
+  width: 110px;
   display: block;
+}
+@media (max-width: 991.98px) {
+  .profile-product__thumb {
+    width: 80px;
+  }
 }
 .profile-product__title {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.46667; /* 146.667% */
+}
+@media (max-width: 767.98px) {
+  .profile-product__title {
+    font-size: 1.4rem;
+    line-height: 1.42857;
+  }
 }
 .profile-product__bottom {
   margin-top: 10px;
@@ -4592,15 +4622,39 @@ html.darkk {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 575.98px) {
+  .profile-product__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
 .profile-product__price {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.45455; /* 145.455% */
 }
+@media (max-width: 767.98px) {
+  .profile-product__price {
+    font-size: 1.8rem;
+    line-height: 1.44444;
+  }
+}
+@media (max-width: 767.98px) {
+  .profile-product__btn {
+    height: 40px;
+    font-size: 1.4rem;
+  }
+}
 .profile-separate {
   height: 1px;
-  background-color: #D2D1D6;
+  background-color: var(--profile-separate-bg);
   margin: 20px 0;
+}
+@media (max-width: 767.98px) {
+  .profile-separate {
+    margin: 16px 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .profile {
     margin-bottom: 50px;
 
@@ -8,8 +10,8 @@
     &__sidebar {
         padding-bottom: 30px;
         border-radius: 20px;
-        background: #FFF;
-        box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.20);
+        background: var(--profile-sidebar-bg);
+        box-shadow: 0 20px 60px 10px var(--profile-sidebar-shadow);
         overflow: hidden;
     }
 
@@ -91,8 +93,8 @@
     &-info {
         padding: 30px;
         border-radius: 20px;
-        background: #FFF;
-        box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.20);
+        background: var(--profile-info-bg);
+        box-shadow: 0 20px 60px 10px var(--profile-info-shadow);
 
         &__title {
             font-size: 2.4rem;
@@ -111,17 +113,28 @@
         display: flex;
         gap: 20px;
 
+        @include abstracts.screen(lg) {
+            align-items: center;
+        }
+
         &__thumb {
-            width: 151px;
-            height: 108px;
-            object-fit: contain;
+            width: 110px;
             display: block;
+
+            @include abstracts.screen(lg) {
+                width: 80px;
+            }
         }
 
         &__title {
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 1.46667; /* 146.667% */
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+                line-height: 1.42857;
+            }
         }
 
         &__bottom {
@@ -129,18 +142,40 @@
             display: flex;
             align-items: center;
             gap: 20px;
+
+            @include abstracts.screen(sm) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
         }
 
         &__price {
             font-size: 2.2rem;
             font-weight: 500;
             line-height: 1.45455; /* 145.455% */
+
+            @include abstracts.screen(md) {
+                font-size: 1.8rem;
+                line-height: 1.44444;
+            }
+        }
+
+        &__btn {
+            @include abstracts.screen(md) {
+                height: 40px;
+                font-size: 1.4rem;
+            }
         }
     }
 
     &-separate {
         height: 1px;
-        background-color: #D2D1D6;
+        background-color: var(--profile-separate-bg);
         margin: 20px 0;
+
+        @include abstracts.screen(md) {
+            margin: 16px 0;
+        }
     }
 }
