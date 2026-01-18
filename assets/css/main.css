@@ -3307,6 +3307,97 @@ html.darkk {
   }
 }
 
+.payment-card {
+  position: relative;
+  background: var(--payment-card-bg);
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  z-index: 0;
+}
+.payment-card__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.payment-card__top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.payment-card__type {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.42857; /* 142.857% */
+}
+.payment-card__number {
+  margin-top: 37px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44444; /* 144.444% */
+}
+.payment-card__bottom {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.payment-card__label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.75; /* 175% */
+}
+.payment-card__value {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4; /* 140% */
+}
+.payment-card__expired {
+  margin: 0 auto 0 40px;
+}
+.payment-card__circle {
+  --circle-width: 28px;
+  position: relative;
+  width: 42px;
+  height: var(--circle-width);
+}
+.payment-card__circle::before, .payment-card__circle::after {
+  content: "";
+  position: absolute;
+  height: var(--circle-width);
+  width: var(--circle-width);
+  border-radius: 50%;
+}
+.payment-card__circle::before {
+  background: #F94545;
+  top: 0;
+  left: 0;
+  mix-blend-mode: hard-light;
+  z-index: 1;
+}
+.payment-card__circle::after {
+  background: #FFB700;
+  top: 0;
+  right: 0;
+}
+
+.new-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  height: 100%;
+  border-radius: 1rem;
+  border: 1px dashed #D2D1D6;
+}
+.new-card__text {
+  color: #aeadad;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.42857; /* 142.857% */
+}
+
 .home {
   margin-bottom: 50px;
 }
@@ -4435,6 +4526,22 @@ html.darkk {
   justify-content: center;
   width: 24px;
   height: 100%;
+}
+.profile-info {
+  padding: 30px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+}
+.profile-info__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.416667; /* 141.667% */
+}
+.profile-info__desc {
+  margin: 4px 0 16px;
+  font-size: 1.5rem;
+  line-height: 1.466667; /* 146.667% */
 }
 
 /*# sourceMappingURL=main.css.map */

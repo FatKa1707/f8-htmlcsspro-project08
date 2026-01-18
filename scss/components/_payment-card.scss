@@ -1,0 +1,105 @@
+.payment-card {
+    position: relative;
+    background: var(--payment-card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    z-index: 0;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &__type {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42857; /* 142.857% */
+    }
+
+    &__number {
+        margin-top: 37px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44444; /* 144.444% */
+    }
+
+    &__bottom {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__label {
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 1.75; /* 175% */
+    }
+
+    &__value {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.4; /* 140% */
+    }
+
+    &__expired {
+        margin: 0 auto 0 40px;
+    }
+
+    &__circle {
+        --circle-width: 28px;
+        position: relative;
+        width: 42px;
+        height: var(--circle-width);
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            height: var(--circle-width);
+            width: var(--circle-width);
+            border-radius: 50%;
+        }
+
+        &::before {
+            background: #F94545;
+            top: 0;
+            left: 0;
+            mix-blend-mode: hard-light;
+            z-index: 1;
+        }
+
+        &::after {
+            background: #FFB700;
+            top: 0;
+            right: 0;
+        }
+
+    }
+}
+
+.new-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    height: 100%;
+    border-radius: 1rem;
+    border: 1px dashed #D2D1D6;
+
+    &__text {
+        color: #aeadad;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42857; /* 142.857% */
+    }
+}
