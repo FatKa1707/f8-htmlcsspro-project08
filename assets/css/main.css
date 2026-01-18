@@ -3398,6 +3398,34 @@ html.darkk {
   line-height: 1.42857; /* 142.857% */
 }
 
+.account-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #F6F6F6;
+  padding: 10px;
+}
+.account-info__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  width: 54px;
+  border-radius: 8px;
+  background: #FFF;
+}
+.account-info__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.46667; /* 146.667% */
+}
+.account-info__desc {
+  margin-top: 6px;
+  font-size: 1.4rem;
+  line-height: 1.42857; /* 142.857% */
+}
+
 .home {
   margin-bottom: 50px;
 }
@@ -4542,6 +4570,37 @@ html.darkk {
   margin: 4px 0 16px;
   font-size: 1.5rem;
   line-height: 1.466667; /* 146.667% */
+}
+.profile-product {
+  display: flex;
+  gap: 20px;
+}
+.profile-product__thumb {
+  width: 151px;
+  height: 108px;
+  object-fit: contain;
+  display: block;
+}
+.profile-product__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.46667; /* 146.667% */
+}
+.profile-product__bottom {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.profile-product__price {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.45455; /* 145.455% */
+}
+.profile-separate {
+  height: 1px;
+  background-color: #D2D1D6;
+  margin: 20px 0;
 }
 
 /*# sourceMappingURL=main.css.map */

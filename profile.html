@@ -158,68 +158,150 @@
                         </div>
                         <div class="col-9">
                             <div class="profile-info">
-                                <h3 class="profile-info__title">My Wallet</h3>
-                                <p class="profile-info__desc">Payment methods</p>
+                                <div class="row gy-3">
+                                    <div class="col-12">
+                                        <h3 class="profile-info__title">My Wallet</h3>
+                                        <p class="profile-info__desc">Payment methods</p>
 
-                                <div class="row">
-                                    <!-- Payment card 1 -->
-                                    <div class="col-4">
-                                        <article class="payment-card" style="--payment-card-bg: #1E2E69">
-                                            <img src="./assets/img/card/plane-bg.svg" alt="" class="payment-card__img">
+                                        <div class="row">
+                                            <!-- Payment card 1 -->
+                                            <div class="col-4">
+                                                <article class="payment-card" style="--payment-card-bg: #1E2E69">
+                                                    <img src="./assets/img/card/plane-bg.svg" alt="" class="payment-card__img">
 
-                                            <div class="payment-card__top">
-                                                <img src="./assets/icons/plane.svg" alt="" >
-                                                <p class="payment-card__type">FeatherCard</p>
+                                                    <div class="payment-card__top">
+                                                        <img src="./assets/icons/plane.svg" alt="" >
+                                                        <p class="payment-card__type">FeatherCard</p>
+                                                    </div>
+
+                                                    <div class="payment-card__number">1234 4567 8901 2221</div>
+
+                                                    <div class="payment-card__bottom">
+                                                        <div>
+                                                            <p class="payment-card__label">Card Holder</p>
+                                                            <p class="payment-card__value">Imran Khan</p>
+                                                        </div>
+                                                        <div class="payment-card__expired">
+                                                            <p class="payment-card__label">Expired</p>
+                                                            <p class="payment-card__value">10/22</p>
+                                                        </div>
+                                                        <div class="payment-card__circle"></div>
+                                                    </div>
+                                                </article>
                                             </div>
 
-                                            <div class="payment-card__number">1234 4567 8901 2221</div>
+                                            <!-- Payment card 2 -->
+                                            <div class="col-4">
+                                                <article class="payment-card" style="--payment-card-bg: #354151">
+                                                    <img src="./assets/img/card/leaf-bg.svg" alt="" class="payment-card__img">
 
-                                            <div class="payment-card__bottom">
-                                                <div>
-                                                    <p class="payment-card__label">Card Holder</p>
-                                                    <p class="payment-card__value">Imran Khan</p>
-                                                </div>
-                                                <div class="payment-card__expired">
-                                                    <p class="payment-card__label">Expired</p>
-                                                    <p class="payment-card__value">10/22</p>
-                                                </div>
-                                                <div class="payment-card__circle"></div>
+                                                    <div class="payment-card__top">
+                                                        <img src="./assets/icons/leaf.svg" alt="" >
+                                                        <p class="payment-card__type">FeatherCard</p>
+                                                    </div>
+
+                                                    <div class="payment-card__number">1234 4567 8901 2221</div>
+
+                                                    <div class="payment-card__bottom">
+                                                        <div>
+                                                            <p class="payment-card__label">Card Holder</p>
+                                                            <p class="payment-card__value">Imran Khan</p>
+                                                        </div>
+                                                        <div class="payment-card__expired">
+                                                            <p class="payment-card__label">Expired</p>
+                                                            <p class="payment-card__value">10/22</p>
+                                                        </div>
+                                                        <div class="payment-card__circle"></div>
+                                                    </div>
+                                                </article>
                                             </div>
-                                        </article>
-                                    </div>
 
-                                    <!-- Payment card 2 -->
-                                    <div class="col-4">
-                                        <article class="payment-card" style="--payment-card-bg: #354151">
-                                            <img src="./assets/img/card/leaf-bg.svg" alt="" class="payment-card__img">
-
-                                            <div class="payment-card__top">
-                                                <img src="./assets/icons/leaf.svg" alt="" >
-                                                <p class="payment-card__type">FeatherCard</p>
-                                            </div>
-
-                                            <div class="payment-card__number">1234 4567 8901 2221</div>
-
-                                            <div class="payment-card__bottom">
-                                                <div>
-                                                    <p class="payment-card__label">Card Holder</p>
-                                                    <p class="payment-card__value">Imran Khan</p>
+                                            <!-- Add new payment card -->
+                                            <div class="col-4">
+                                                <div class="new-card">
+                                                    <img src="./assets/icons/plus.svg" alt="">
+                                                    <span class="new-card__text">Add New Card</span>
                                                 </div>
-                                                <div class="payment-card__expired">
-                                                    <p class="payment-card__label">Expired</p>
-                                                    <p class="payment-card__value">10/22</p>
-                                                </div>
-                                                <div class="payment-card__circle"></div>
                                             </div>
-                                        </article>
-                                    </div>
-
-                                    <!-- Add new payment card -->
-                                    <div class="col-4">
-                                        <div class="new-card">
-                                            <img src="./assets/icons/plus.svg" alt="">
-                                            <span class="new-card__text">Add New Card</span>
                                         </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h3 class="profile-info__title">Account info</h3>
+                                        <p class="profile-info__desc">Addresses, contact information and password</p>
+
+                                        <div class="row g-2">
+                                            <!-- Account info 1 -->
+                                            <div class="col-6">
+                                                <article class="account-info">
+                                                    <div class="account-info__icon">
+                                                        <img src="./assets/icons/massage.svg" alt="" class="icon">
+                                                    </div>
+
+                                                    <div>
+                                                        <h3 class="account-info__title">Email Address</h3>
+                                                        <p class="account-info__desc">tarek97.ta@gmail.com</p>
+                                                    </div>
+                                                </article>
+                                            </div>
+
+                                            <!-- Account info 2 -->
+                                            <div class="col-6">
+                                                <article class="account-info">
+                                                    <div class="account-info__icon">
+                                                        <img src="./assets/icons/phone.svg" alt="" class="icon">
+                                                    </div>
+
+                                                    <div>
+                                                        <h3 class="account-info__title">Phone number</h3>
+                                                        <p class="account-info__desc">+000 11122 2345 657</p>
+                                                    </div>
+                                                </article>
+                                            </div>
+
+                                            <!-- Account info 3 -->
+                                            <div class="col-6">
+                                                <article class="account-info">
+                                                    <div class="account-info__icon">
+                                                        <img src="./assets/icons/location.svg" alt="" class="icon">
+                                                    </div>
+
+                                                    <div>
+                                                        <h3 class="account-info__title">Add an address</h3>
+                                                        <p class="account-info__desc">Bangladesh Embassy, Washington, DC 20008</p>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h3 class="profile-info__title">Lists</h3>
+                                        <p class="profile-info__desc">2 items - Primary</p>
+
+                                        <article class="profile-product">
+                                            <img src="./assets/img/products/product-card-01.png" alt="" class="profile-product__thumb">
+                                            <div class="profile-product__content">
+                                                <p class="profile-product__title">Coffee Beans - Espresso Arabica and Robusta Beans</p>
+                                                <div class="profile-product__bottom">
+                                                    <span class="profile-product__price">$47.00</span>
+                                                    <a href="./checkout.html" class="btn btn--primary btn--rounded">Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                        <div class="profile-separate"></div>
+
+                                        <article class="profile-product">
+                                            <img src="./assets/img/products/product-card-02.png" alt="" class="profile-product__thumb">
+                                            <div class="profile-product__content">
+                                                <p class="profile-product__title">Lavazza Coffee Blends - Try the Italian Espresso</p>
+                                                <div class="profile-product__bottom">
+                                                    <span class="profile-product__price">$53.00</span>
+                                                    <a href="./checkout.html" class="btn btn--primary btn--rounded">Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </article>
                                     </div>
                                 </div>
                             </div>
