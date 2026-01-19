@@ -97,6 +97,9 @@
         box-shadow: 0 20px 60px 10px var(--profile-info-shadow);
 
         &__title {
+            display: flex;
+            align-items: center;
+
             font-size: 2.4rem;
             font-weight: 700;
             line-height: 1.416667; /* 141.667% */
@@ -106,6 +109,13 @@
             margin: 4px 0 16px;
             font-size: 1.5rem;
             line-height: 1.466667; /* 146.667% */
+        }
+
+        &__back-arrow {
+            width: 50px;
+            padding-right: 20px;
+            position: relative;
+            top: 5px;
         }
     }
 

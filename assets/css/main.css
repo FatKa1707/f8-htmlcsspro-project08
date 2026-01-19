@@ -4578,6 +4578,8 @@ html.darkk {
   box-shadow: 0 20px 60px 10px var(--profile-info-shadow);
 }
 .profile-info__title {
+  display: flex;
+  align-items: center;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.416667; /* 141.667% */
@@ -4586,6 +4588,12 @@ html.darkk {
   margin: 4px 0 16px;
   font-size: 1.5rem;
   line-height: 1.466667; /* 146.667% */
+}
+.profile-info__back-arrow {
+  width: 50px;
+  padding-right: 20px;
+  position: relative;
+  top: 5px;
 }
 .profile-product {
   display: flex;
@@ -4655,6 +4663,17 @@ html.darkk {
   .profile-separate {
     margin: 16px 0;
   }
+}
+
+.form-card__label {
+  font-size: 1.8rem;
+  line-height: 1.44444;
+  margin-bottom: 20px;
+}
+.form-card__bottom {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=main.css.map */
