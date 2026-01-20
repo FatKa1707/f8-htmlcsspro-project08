@@ -1434,7 +1434,7 @@ html {
   --account-info-icon-bg: #fff;
 }
 
-html.darkk {
+html.dark {
   --text-color: #FFF;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(141deg) brightness(104%) contrast(106%);
   --body-bg: #292E39;
@@ -1452,11 +1452,11 @@ html.darkk {
   --menu-column-icon-color: brightness(0) saturate(100%) invert(80%) sepia(1%) saturate(4800%) hue-rotate(202deg) brightness(125%) contrast(97%);
 }
 @media (max-width: 991.98px) {
-  html.darkk {
+  html.dark {
     --header-shadow-color: 0 20px 60px 10px rgba(0, 0, 0, 0.20);
   }
 }
-html.darkk {
+html.dark {
   --sidebar-bg: #292E39;
   --sdiebar-shadow: rgba(23, 28, 40, 0.40);
   --cate-item-bg: #171C28;
@@ -1484,21 +1484,21 @@ html.darkk {
   --product-detail-tag-bg: #292E39;
 }
 @media (max-width: 767.98px) {
-  html.darkk {
+  html.dark {
     --product-detail-bg: #292E39;
     --product-detail-info-bg: transparent;
     --product-detail-info-content-bg: #171C28;
   }
 }
-html.darkk {
+html.dark {
   --breadcrumbs-bg: #171C28;
 }
 @media (max-width: 767.98px) {
-  html.darkk {
+  html.dark {
     --breadcrumbs-bg: #171C28;
   }
 }
-html.darkk {
+html.dark {
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.20);
   --search-bar-bg: #171C28;
   --review-card-bg: #171C28;
@@ -1937,6 +1937,10 @@ html.darkk {
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid #D2D1D6;
+}
+.user-menu__icon {
+  width: 24px;
+  height: 24px;
 }
 
 .footer {
