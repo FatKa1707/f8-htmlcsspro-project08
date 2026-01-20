@@ -1772,12 +1772,25 @@ html.darkk {
   height: 30px;
   background: #EDEDF6;
 }
+.top-action__user {
+  position: relative;
+}
+.top-action__user:hover .act-dropdown {
+  display: block;
+}
 .top-action__avatar {
   width: 50px;
   height: 50px;
   border-radius: 8px;
   display: block;
   cursor: pointer;
+}
+.top-action__dropdown {
+  right: -15px !important;
+  width: min(300px, 100vw) !important;
+}
+.top-action__dropdown-arrow {
+  right: 15px !important;
 }
 @media (max-width: 767.98px) {
   .top-action__sign-up {
@@ -1892,6 +1905,38 @@ html.darkk {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.466666; /* 146.667% */
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.user-menu__name {
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.user-menu__list {
+  margin-top: 30px;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 0;
+}
+.user-menu__separate {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #D2D1D6;
 }
 
 .footer {
